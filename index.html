@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="background hidden"></div>
+	<div class="admin-banner hidden">
+		<p><i class="fa-regular fa-pen-to-square"></i>Mode édition</p>
+	</div>
+	<header>
+		<h1>Sophie Bluel<span>ARCHITECTE D'INTERIEUR</span></h1>
+		<nav>
+			<ul>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li><a class="admin-login" href = "login.html">login</a></li>
+				<li><a class="admin-logout hidden" href = "index.html">logout</a></li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="introduction">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<h2>Mes Projets <span class="admin-btn-modifier hidden"><i class="fa-regular fa-pen-to-square"></i>modifier</span></h2>
+			<div class="filter-gallery">
+				<button class="tous-btn">Tous</button>
+				<!-- button filtre dynamique -->
+			</div>
+			<div class="gallery"><!-- image + description dynamique --></div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer">
+			</form>
+		</section>
+		<!--modale pour supprimer des images visible en login-->
+		<section class="modale-delete hidden">
+				<i class="modale-close-btn fa-solid fa-xmark"></i>
+				<h3>Galerie photo</h3>
+				<div class="modale-img"><!--  gallerie image dynamique--></div>
+				<div class ="modale-border"></div>
+				<button class="modale-add-btn" type="submit">Ajouter une photo</button>
+		</section>
+		<!--modale pour ajouter des images visible en login-->
+		<section class="modale-add hidden">
+			<div class="modale-add-icons">
+				<i class="modaleAdd-return-btn fa-solid fa-arrow-left"></i>
+				<i class="modaleAdd-close-btn fa-solid fa-xmark"></i>	
+			</div>
+			<h3>Ajout photo</h3>
+			<div class="add-containers">
+				<i class=" icone-img fa-regular fa-image"></i>
+				<div class="image-added"><!-- creer en javascript --></div>
+				<label for="imageUpload" class="image-btn">+ Ajouter photo</label>
+				<input type="file" id="imageUpload" accept="image/*" name="image">
+				<p class="para-modale">jpg.png : 4mo max</p>
+			</div>
+			<form class="modale-add-form" action="#" method="post" enctype="multipart/form-data">
+				<label for="modale-add-title">Titre</label>
+				<input type="text" name="title" id="modale-add-title">
+				<label for="categorie-form">Catégories</label>
+				<select name="category" id="categorie-form"><!-- ajout javascrpt --></select>
+				<div class ="modale-border"></div>
+				<input class="modale-add-submit" type="submit" value="Valider">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,508 @@
+/*//////////////////////////////GLOBAL RESET STYLE//////////////////////////////////////*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration:none;
+	color: black;
+}
+
+*{
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+/*/////////////////////////////////GLOBAL////////////////////////////////////////////////////////*/
+body {
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+
+header,main,footer{
+	max-width: 1140px;
+	margin:auto;
+}
+main,header,footer{
+	max-width: 1440px;
+	margin:auto;
+}
+
+header { 
+	max-width: 80%;
+	padding-left: 20%;
+	display: flex;
+	justify-content: space-between;
+}
+section,header {
+	margin: 50px 0;
+}
+
+#introduction img,.login-form a, .add-containers i,.modale-add-btn,.add-containers label,.modale-img i,.modale-close-btn{
+	display: block;
+}
+/*//////////////////////////////////TITLE/////////////////////////////////////////////////////////*/
+h1{
+	display: flex;
+	flex-direction: column;
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+h1,h2{
+	font-family: 'Syne';
+}
+
+h1 > span {	
+	font-size:10px;
+	letter-spacing: 0.1em;
+	padding-top: 5px;
+}
+h1 > span,h3{
+	font-family: 'Work Sans';
+}
+
+h2{
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+
+h3{
+	font-size: 26px;
+	margin-bottom: 50px;
+	color: black;
+	font-weight: 400;
+}
+
+#portfolio h2,h3{
+	text-align: center;
+}
+
+#contact h2,
+.login-form h2,
+.modale-add-form h2{
+	margin-bottom: 20px;
+}
+
+#introduction h2,#portfolio h2 {
+	margin-bottom: 1em;
+}
+#portfolio h2 {
+	margin-top: 100px;
+}
+.login-form h2{
+	margin-top: 150px;
+}
+/*//////////////////////////////////HEADER FOOTER/////////////////////////////////////////////////////////*/
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+nav li a {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li a:hover {
+	color: #B1663C;
+}
+footer nav ul {
+	justify-content: flex-end;
+	margin: 2em
+}
+/*//////////////////////////////////INTRODUCTION//////////////////////////////////////////////*/
+#introduction,#introduction img,#introduction p{
+	width: 80%;
+}
+#introduction,#introduction img,.gallery{
+	margin: auto;
+}
+
+#introduction {
+	display: flex;
+	align-items: center;
+	margin-top: 80px;
+}
+#introduction figure,#introduction article {
+	flex: 1
+}
+
+#introduction p {
+	margin-bottom: 1em;
+}
+
+.gallery{
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery,.modale-img {
+	width: 73%;
+	display: grid;	
+}
+
+.gallery img {
+	width: 100%;
+}
+
+.gallery figcaption{
+	padding-top: 7px;;
+}
+/*//////////////////////////////////LOGIN.HTML/////////////////////////////////////////////*/
+#contact,
+.login-form{
+	width: 50%;
+	margin: auto;
+}
+
+.login-form a {
+	text-decoration: underline;
+}
+
+.login-footer{
+	margin-top: 20%;
+}
+/*//////////////////////////////////FILTER GALLERY/////////////////////////////////////////////*/
+.filter-gallery{
+	width: 40%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	gap:10px;
+	margin-bottom: 40px;
+}
+
+#contact > *,.login-form > *,.login-form a{
+	text-align: center;
+}
+
+/*//////////////////////////////////USER INTERFACE//////////////////////////////////////////////*/
+.admin-banner{
+	width: 100%;
+	height: 59px;
+	background-color: black;
+	color:white;
+	text-align: center;
+	font-family: 'Work Sans';
+}
+
+.admin-banner i {
+	font-size: 16px;
+	margin-right: 15px ;
+	color: white;
+}
+.admin-banner p {
+	padding: 20px;
+}
+/*//////////////////////////////////MODALE FOR DELETE//////////////////////////////////////////////*/
+body{
+	position: relative; 
+	z-index: 1;
+}
+
+.background{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.30);
+}
+
+.modale-delete{
+	width: 630px;	
+	margin: auto;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	position: fixed;
+	z-index: 3;
+}
+
+.modale-img{	
+	margin: auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+}
+
+.modale-img figure{
+	position: relative;
+}
+
+.modale-img img{
+	width: 100%;
+}
+.modale-img figcaption{
+	width: 11px;
+	height: 9px;
+	border-radius: 10px;
+}
+
+.modale-img i {
+	top: 4px;
+	right: 4px;
+	padding: 3px;
+	font-size: 11px;
+	color: white;
+	background-color: black;
+	position: absolute;
+	z-index: 5;	
+	border-radius: 3px;
+}
+
+.modale-border{
+	border: 1px solid #B3B3B3;
+	width: 70%;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+/*//////////////////////////////////MODALE FOR ADD//////////////////////////////////////////////*/
+.modale-add{
+	font-family: 'Work Sans';
+	font-size :16px;
+	width: 630px;	
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	position: fixed;
+	z-index: 3;
+}
+
+.modale-add,
+.add-containers,.add-containers label,
+.modale-add-form{
+	margin: auto;
+}
+
+.add-containers *{
+	text-align: center;
+}
+
+.add-containers{
+	width: 60%;
+	background-color: #E8F1F6;
+	padding: 20px;
+}
+
+.add-containers i {
+	font-size: 5rem;
+	color:#B9C5CC;
+	margin-bottom: 13px;
+}
+
+.add-containers label{
+	width: 45%;
+	background-color: #B9C5CC;
+	color:#306685;		
+	font-weight: 500;
+	border-radius: 50px;
+	padding:15px 10px;
+}
+
+.add-containers p{
+	margin-top:10px;
+	font-size: 10px;	
+}
+
+.image-added img{
+	width: 129px;
+	height: 193px;
+}
+
+.modale-add-form{
+	width: 65%;
+}
+	
+.modale-add-form .modale-border{
+	margin-top: 50px;
+	width: 100%;
+}
+/*//////////////////////////////////SUBMIT BUTTON//////////////////////////////////////////////*/
+input[type="submit"],.admin-btn-modifier,.filter-gallery button,.modale-add-icons,
+.image-btn,.modale-close-btn,.modale-img i,.modale-add-btn{
+	cursor:pointer
+}
+
+input[type="submit"],.modale-add-btn,.filter-gallery button{
+	font-family: 'Syne';
+	font-weight: 700;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+input[type="submit"],
+.modale-add-btn{
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+}
+
+input[type="submit"]:hover,
+.modale-add-btn:hover{
+	background-color: #0E2F28;
+}
+
+.modale-add-form input[type="submit"]{	
+	background-color: #A7A7A7;
+	margin-top: 10px;
+	color: white;
+	text-align: center;
+}
+
+.modale-add-form input[type="submit"],.modale-add-btn{
+	width: 237px;
+	height: 36px;
+}
+
+.filter-gallery button{
+	width: auto;
+	padding:0px 20px 0px 20px;
+	margin : 0 ;
+	height: 37px;
+	color:#1D6154;
+	border: 1px solid #1D6154;
+	background-color: white;
+}
+
+.filter-gallery button:hover,
+.filter-gallery button:focus{
+	color:white;
+	background-color: #1D6154;
+}
+/*//////////////////////////////////DELETE ADD OPEN CLOSE RETURN//////////////////////////////////////////////*/
+.admin-btn-modifier{
+	color:black;
+	font-size: 14px;
+	font-weight: 400;
+	padding-left: 15px;
+	vertical-align:middle;
+	font-family: 'Work Sans';
+}
+
+.admin-btn-modifier i {
+	padding-right: 5px;
+}
+
+.modale-close-btn {
+	margin:30px;
+	text-align: end;
+	font-size: 24px;
+	margin-bottom: 0;	
+}
+
+.modale-add-icons{
+	display: flex;
+	justify-content: space-between;
+}
+
+.modale-add-icons i{	
+	font-size: 24px;
+	margin:30px;
+}
+
+.modale-add-btn{
+	margin-bottom: 50px;
+	text-align: center;
+}
+/*//////////////////////////////////FORMULAIRE/////////////////////////////////////////////////*/
+.add-containers p,.modale-add-form input,.modale-add-form select,.modale-add-form option{
+	color: #444444;
+}
+
+.modale-add-form label,.modale-add-form input,.modale-add-form option,
+#contact form, .login-form form,.modale-add-form{
+	text-align: start;
+}
+
+#contact > *,.login-form > *,.login-form a{
+	text-align: center;
+}
+
+#contact form, .login-form form,.modale-add-form  {
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.modale-add-form input,.modale-add-form select{
+	font-family: 'Work Sans';
+	font-size: 16px;
+}
+
+#contact textarea,.modale-add-form select,#contact input,.login-form input,.modale-add-form input{
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modale-add-form select,#contact input,.login-form input,.modale-add-form input {
+	height: 50px;	
+}
+
+#contact input,.login-form input,.modale-add-form input {
+	font-size: 1.2em;
+}
+
+#contact label,.login-form label{
+	margin: 2em 0 1em 0;
+}
+
+.modale-add-form label{
+	color:#3D3D3D;
+	margin: 15px 0px;
+}
+
+/*//////////////////////////////////HIDDEN PART//////////////////////////////////////////////*/
+.hidden,.add-containers #imageUpload{
+	display:none;
+}
